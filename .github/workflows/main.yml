@@ -2,8 +2,6 @@ name: HW5_CI
 
 on:
   push:
-    branches: none # [ "main" ]
-
   workflow_dispatch:
 
 jobs:
