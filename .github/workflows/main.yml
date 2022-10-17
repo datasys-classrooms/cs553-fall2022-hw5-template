@@ -9,3 +9,5 @@ on:
 jobs:
   ext-workflow:
     uses: datasys-classrooms/cs553-fall2022-hw5-workflow/.github/workflows/main.yml@main
+    with:
+      tag: $GITHUB_RUN_NUMBER
