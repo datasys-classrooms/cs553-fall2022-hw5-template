@@ -1,0 +1,11 @@
+name: HW5_CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  ext-workflow:
+    uses: datasys-classrooms/cs553-fall2022-hw5-workflow
