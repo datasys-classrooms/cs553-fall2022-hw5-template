@@ -2,10 +2,13 @@ name: HW5_CI
 
 on:
   push:
-    branches: [ "main" ]
-
+    branches: [ "main", "master" ]
+    
   workflow_dispatch:
 
 jobs:
   ext-workflow:
-    uses: datasys-classrooms/cs553-fall2022-hw5-workflow/.github/workflows/HW5_CI.yml@main
+    uses: datasys-classrooms/cs553-fall2022-hw5-workflow/.github/workflows/HW5_CI.yml@master
+    with:
+      repo-name: ${{ github.GITHUB_REPOSITORY }}
+      ref-name: ${{ github.GITHUB_REF_NAME }}
