@@ -6,3 +6,10 @@
 * please-write-student1-name (please-write-email-address)  
 * please-write-student2-name (please-write-email-address) or remove  
 * please-write-student3-name (please-write-email-address) or remove  
+
+## How to check and test your implementation
+
+You can then run all the checks and tests for your implementation:
+```
+$ bash run-mysort.sh
+```
