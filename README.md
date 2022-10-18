@@ -9,7 +9,7 @@
 
 ## How to check and test your implementation
 
-You can then run all the checks and tests for your implementation:
+You can run all the checks and tests for your implementation:
 ```
 $ bash run-mysort.sh
 ```
