@@ -1,8 +1,8 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 class MySort
 {
@@ -21,24 +21,20 @@ class MySort
 
     public void sort()
     {
-        String line;
-        FileReader fileReader;
-        FileWriter fileWriter;
-        BufferedReader bufferedReader;
-        BufferedWriter bufferedWriter;
+        byte[] buffer = new byte[100];
+        InputStream inputStream;
+        OutputStream outputStream;
 
         try {
-            fileReader = new FileReader(inputFile);
-            fileWriter = new FileWriter(outputFile);
-            bufferedReader = new BufferedReader(fileReader);
-            bufferedWriter = new BufferedWriter(fileWriter);
-
-            while ((line = bufferedReader.readLine()) != null) {
-                bufferedWriter.write(line);
+            inputStream = new FileInputStream(inputFile);
+            outputStream = new FileOutputStream(outputFile);
+            
+            while (inputStream.read(buffer) == 100) {
+                outputStream.write(buffer);
             }
 
-            fileReader.close();
-            fileWriter.close();
+            inputStream.close();
+            outputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

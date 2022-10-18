@@ -1,4 +1,10 @@
 /mysort
 /MySort.class
 /mysort.jar
-/data
+/data.in
+/data.out
+/data.sum
+/mysort.log
+/valsort.log
+/gensort
+/valsort
